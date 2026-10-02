@@ -92,7 +92,7 @@ const food={hcm:[
 ['Vị Cuisine','越南菜','4.8','₫200–500k','Vi Cuisine 64 Huyen Tran Cong Chua Da Lat',''],
 ['Cơm Gà Hoàng Diệu','越式鸡饭','4.2','₫10–35k 菜品','Com Ga Hoang Dieu 2 Hoang Dieu Da Lat','https://shopeefood.vn/lam-dong/com-ga-hoang-dieu'],
 ['Carrot Restaurant','法式／欧式家常菜','Foody 7.4/10','约 ₫150–250k','Carrot Restaurant 36 Ba Trieu Da Lat','https://www.foody.vn/lam-dong/carrot-restaurant-mon-au-gia-viet'],
-['Le Chalet Dalat','法式／越式小馆','Foody 7.4/10','约 ₫120–250k','Le Chalet Dalat 6 Huynh Thuc Khang Da Lat','https://www.foody.vn/lam-dong/le-chalet-dalat-nha-hang-phap']]
+['Artist Alley Restaurant','法越融合／法式家常菜','4.5','约 ₫100–200k','Artist Alley Restaurant 124/1 Phan Dinh Phung Da Lat','https://dalat.vn/vi/artistalley']]
 };
 function renderFood(city){const data=food[city];document.getElementById('foodCards').innerHTML=data.map((r,i)=>`<article class="food-card"><div class="food-top"><h3>${String(i+1).padStart(2,'0')} · <a href="${mapQuery(r[4])}" target="_blank" rel="noopener">${escapeHtml(r[0])} ↗</a></h3><span class="star">★ ${escapeHtml(r[2])}</span></div><p>${escapeHtml(r[1])} · <span class="price">${escapeHtml(r[3])} / 人</span></p>${r[5]?`<a class="source" target="_blank" rel="noopener" href="${r[5]}">查看本地平台／菜单 ↗</a>`:'<span class="source">价格参考 Google 地图</span>'}</article>`).join('');const h=city==='hcm';document.getElementById('foodHcmBtn').setAttribute('aria-selected',String(h));document.getElementById('foodDalatBtn').setAttribute('aria-selected',String(!h))}document.getElementById('foodHcmBtn').addEventListener('click',()=>renderFood('hcm'));document.getElementById('foodDalatBtn').addEventListener('click',()=>renderFood('dalat'));renderFood('hcm');
 
