@@ -78,7 +78,9 @@ const food={hcm:[
 ['Bún Thịt Nướng Chị Tuyền','越式烤肉米线','4.4','₫30–66k','Bun Thit Nuong Chi Tuyen 175C Co Giang Ho Chi Minh','https://shopeefood.vn/ho-chi-minh/chi-tuyen-bun-thit-nuong'],
 ['De Tham Restaurant','越南菜／素食','4.9','₫100–300k','De Tham Restaurant 258 De Tham Ho Chi Minh',''],
 ['Vo Roof','越南菜／屋顶餐厅','4.6','₫100–200k','Vo Roof 113 Ton That Dam Ho Chi Minh','https://www.foody.vn/ho-chi-minh/vo-roof-garden-nha-hang-viet'],
-['Hai’s Restaurant','越南菜／素食','4.9','₫100–300k','Hais Restaurant 257 Ly Tu Trong Ho Chi Minh','https://haisrestaurant.com/wp-content/uploads/2025/10/10-Menu-A4-Hai-257-LTT-da-nen.pdf']],dalat:[
+['Hai’s Restaurant','越南菜／素食','4.9','₫100–300k','Hais Restaurant 257 Ly Tu Trong Ho Chi Minh','https://haisrestaurant.com/wp-content/uploads/2025/10/10-Menu-A4-Hai-257-LTT-da-nen.pdf'],
+['Uchi Sushi','日式寿司／刺身','Foody：149 条评价','约 ₫200–300k','Uchi Sushi 14 Duong 45 District 4 Ho Chi Minh','https://www.foody.vn/ho-chi-minh/uchi-sushi'],
+['Gami Sushi','日式寿司／卷物','Foody 9.1/10','约 ₫120–250k','Gami Sushi 224 Lo J Hoang Dieu District 4 Ho Chi Minh','https://www.foody.vn/ho-chi-minh/gami-sushi-hoang-dieu']],dalat:[
 ['Nam Phương Viet Kitchen','越南家常饭','4.8','₫100k 内','Nam Phuong Viet Kitchen 7/2 Ba Trieu Da Lat',''],
 ['Phở Ân','牛肉河粉','4.9','₫100k 内','Pho An 23/5 Tran Phu Da Lat','https://www.foody.vn/lam-dong/pho-an-tran-phu'],
 ['Bina Bina','越式蒸汽菜','4.9','₫200–300k','Bina Bina 30 Huynh Thuc Khang Da Lat',''],
@@ -88,7 +90,9 @@ const food={hcm:[
 ['Bò Né Dã Quỳ','铁板牛肉／煎蛋','4.8','₫100–200k','Bo Ne Da Quy 119 Phan Dinh Phung Da Lat','https://shopeefood.vn/lam-dong/bo-ne-da-quy'],
 ['Trang’s Cookery','越南菜／早午餐','4.8','₫200–300k','Trangs Cookery 211 Phan Dinh Phung Da Lat','https://www.foody.vn/lam-dong/trang-s-cookery'],
 ['Vị Cuisine','越南菜','4.8','₫200–500k','Vi Cuisine 64 Huyen Tran Cong Chua Da Lat',''],
-['Cơm Gà Hoàng Diệu','越式鸡饭','4.2','₫10–35k 菜品','Com Ga Hoang Dieu 2 Hoang Dieu Da Lat','https://shopeefood.vn/lam-dong/com-ga-hoang-dieu']]
+['Cơm Gà Hoàng Diệu','越式鸡饭','4.2','₫10–35k 菜品','Com Ga Hoang Dieu 2 Hoang Dieu Da Lat','https://shopeefood.vn/lam-dong/com-ga-hoang-dieu'],
+['Carrot Restaurant','法式／欧式家常菜','Foody 7.4/10','约 ₫150–250k','Carrot Restaurant 36 Ba Trieu Da Lat','https://www.foody.vn/lam-dong/carrot-restaurant-mon-au-gia-viet'],
+['Le Chalet Dalat','法式／越式小馆','Foody 7.4/10','约 ₫120–250k','Le Chalet Dalat 6 Huynh Thuc Khang Da Lat','https://www.foody.vn/lam-dong/le-chalet-dalat-nha-hang-phap']]
 };
 function renderFood(city){const data=food[city];document.getElementById('foodCards').innerHTML=data.map((r,i)=>`<article class="food-card"><div class="food-top"><h3>${String(i+1).padStart(2,'0')} · <a href="${mapQuery(r[4])}" target="_blank" rel="noopener">${escapeHtml(r[0])} ↗</a></h3><span class="star">★ ${escapeHtml(r[2])}</span></div><p>${escapeHtml(r[1])} · <span class="price">${escapeHtml(r[3])} / 人</span></p>${r[5]?`<a class="source" target="_blank" rel="noopener" href="${r[5]}">查看本地平台／菜单 ↗</a>`:'<span class="source">价格参考 Google 地图</span>'}</article>`).join('');const h=city==='hcm';document.getElementById('foodHcmBtn').setAttribute('aria-selected',String(h));document.getElementById('foodDalatBtn').setAttribute('aria-selected',String(!h))}document.getElementById('foodHcmBtn').addEventListener('click',()=>renderFood('hcm'));document.getElementById('foodDalatBtn').addEventListener('click',()=>renderFood('dalat'));renderFood('hcm');
 
