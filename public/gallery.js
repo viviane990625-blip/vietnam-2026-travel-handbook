@@ -28,7 +28,7 @@ const foodPhotos = {
   'Cậu Cháo': {dish:'蚝粥',album:'https://shopeefood.vn/ho-chi-minh/cau-chao-quan-chao-hau-sua'},
   'NGUYEN’S': {dish:'亚洲融合菜；具体推荐以当日菜单为准'},
   'Bún Thịt Nướng Chị Tuyền': {dish:'烤肉米线',front:['https://cdn.tasteatlas.com/images/restaurants/950f9b43500942e29ba18d458c6127e5.jpg?w=600','https://www.tasteatlas.com/bun-thit-nuong-chi-tuyen']},
-  'De Tham Restaurant': {dish:'越式家常菜／素食；具体菜品看菜单'},
+  'De Tham Restaurant': {dish:'烤肉米线（bún chả）、鲜虾春卷、炸春卷；素食可看当日菜单',plate:['https://dethamrestaurant.com/wp-content/uploads/2024/10/6-1024x789.png','https://dethamrestaurant.com/hello-world/'],album:'https://www.corner.inc/place/pUBtCX6WqQS4'},
   'Vo Roof': {dish:'越式小春卷与饮品',inside:['https://ak-d.tripcdn.com/images/1mi04224x93mfwmro3BA5.jpg?proc=source%2Ftrip','https://www.trip.com/moments/theme/poi-vo-roof-136770605-restaurant-993134/']},
   'Hai’s Restaurant': {dish:'越式家常菜／素食；具体菜品看菜单',album:'https://haisrestaurant.com/wp-content/uploads/2025/10/10-Menu-A4-Hai-257-LTT-da-nen.pdf'},
   'Uchi Sushi': {dish:'寿司、三文鱼刺身',inside:['https://pasgo.vn/Upload/anh-chi-tiet/nha-hang-uchi-sushi-duong-45-8-normal-337457826274.webp','https://pasgo.vn/nha-hang/nha-hang-uchi-sushi-duong-45-2567'],album:'https://www.foody.vn/ho-chi-minh/uchi-sushi/album-mon-an'},
